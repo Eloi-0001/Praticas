@@ -3,7 +3,7 @@ use pokemons;
 
 #--------------------criando tabela
 
-Create table mons (
+Create table if not exists mons (
 	poke_id int auto_increment primary key,
     poke_nome varchar (25) not null,
     poke_gen int not null,
@@ -12,7 +12,7 @@ Create table mons (
 );
 
 
-create table lenda (
+create table if not exists lenda (
 	poke_id int auto_increment primary key,
 	poke_nome varchar (25) not null,
     poke_data date not null,
